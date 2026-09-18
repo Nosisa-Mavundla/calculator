@@ -1,7 +1,7 @@
 # Calculator
 
 A calculator with a real button-grid UI, built with Python (Flask), HTML,
-and CSS — no JavaScript. Every button press submits back to the Python
+and CSS. Every button press submits back to the Python
 server, which handles the calculation and returns the updated display.
 
 ## Problem it solves
