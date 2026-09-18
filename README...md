@@ -25,11 +25,7 @@ HTML and Python — no client-side scripting required.
 ## How to run
 
 1. Install dependencies:
-   ```bash
    pip install -r requirements.txt
-   ```
 2. Start the app:
-   ```bash
    python app.py
-   ```
 3. Open your browser to `http://127.0.0.1:5000`
