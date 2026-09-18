@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <main class="calculator">
+    <div class="display">
+      <span>{{ expression }}</span>
+    </div>
+
+    <div class="keypad">
+
+      <form action="/press" method="post"><button name="key" value="C" class="key key-clear">C</button></form>
+      <form action="/press" method="post"><button name="key" value="DEL" class="key key-clear">⌫</button></form>
+      <form action="/press" method="post"><button name="key" value="/" class="key key-op">÷</button></form>
+      <form action="/press" method="post"><button name="key" value="*" class="key key-op">×</button></form>
+
+      <form action="/press" method="post"><button name="key" value="7" class="key">7</button></form>
+      <form action="/press" method="post"><button name="key" value="8" class="key">8</button></form>
+      <form action="/press" method="post"><button name="key" value="9" class="key">9</button></form>
+      <form action="/press" method="post"><button name="key" value="-" class="key key-op">−</button></form>
+
+      <form action="/press" method="post"><button name="key" value="4" class="key">4</button></form>
+      <form action="/press" method="post"><button name="key" value="5" class="key">5</button></form>
+      <form action="/press" method="post"><button name="key" value="6" class="key">6</button></form>
+      <form action="/press" method="post"><button name="key" value="+" class="key key-op">+</button></form>
+
+      <form action="/press" method="post"><button name="key" value="1" class="key">1</button></form>
+      <form action="/press" method="post"><button name="key" value="2" class="key">2</button></form>
+      <form action="/press" method="post"><button name="key" value="3" class="key">3</button></form>
+      <form action="/press" method="post"><button name="key" value="=" class="key key-equals span-two-rows">=</button></form>
+
+      <form action="/press" method="post"><button name="key" value="0" class="key span-two-cols">0</button></form>
+      <form action="/press" method="post"><button name="key" value="." class="key">.</button></form>
+
+    </div>
+  </main>
+
+</body>
+</html>

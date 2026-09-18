@@ -1,0 +1,106 @@
+:root {
+  --body-bg: #1b1c20;
+  --case: #232429;
+  --display-bg: #14151a;
+  --display-text: #ffb454;
+  --key-bg: #2f3037;
+  --key-text: #eceef1;
+  --key-hover: #3a3b43;
+  --op-bg: #3d3f4a;
+  --equals-bg: #ffb454;
+  --equals-text: #1b1c20;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--body-bg);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.calculator {
+  width: 300px;
+  background: var(--case);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.display {
+  background: var(--display-bg);
+  border-radius: 12px;
+  padding: 24px 16px;
+  margin-bottom: 16px;
+  text-align: right;
+  overflow-x: auto;
+}
+
+.display span {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 2.2rem;
+  color: var(--display-text);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.keypad form {
+  display: contents;
+}
+
+.key {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  background: var(--key-bg);
+  color: var(--key-text);
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.key:hover {
+  background: var(--key-hover);
+}
+
+.key:active {
+  transform: scale(0.97);
+}
+
+.key-op {
+  background: var(--op-bg);
+}
+
+.key-clear {
+  background: var(--op-bg);
+  color: var(--display-text);
+}
+
+.key-equals {
+  background: var(--equals-bg);
+  color: var(--equals-text);
+  font-weight: 700;
+}
+
+.span-two-cols {
+  grid-column: span 2;
+}
+
+.span-two-rows {
+  grid-row: span 2;
+  height: auto;
+}
